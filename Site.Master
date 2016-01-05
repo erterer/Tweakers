@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Tweakers.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Tweakers</title>
+	<link rel = "stylesheet" href = "~/Resources/bootstrap.css" />
+	<link rel = "stylesheet" href = "~/Resources/bootstrap.min.css" />
+	<link rel = "stylesheet" href = "~/Resources/bootstrap-theme.css" />
+	<link rel = "stylesheet" href = "~/Resources/bootstrap-theme.min.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/Home.aspx">Tweakers</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+						<li><a runat="server" href="~/Producten.aspx">Producten</a></li>
+						<li><a runat="server" href="~/Shops.aspx">Winkels</a></li>
+					</ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Tweakers Sven Nottelman</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

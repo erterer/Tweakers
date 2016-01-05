@@ -11,7 +11,7 @@ namespace Tweakers
 {
 
 
-    public partial class Homepage
+    public partial class Home
     {
     }
 }

@@ -68,9 +68,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Homepage.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Koelkasten.aspx" />
     <Content Include="packages.config" />
-    <None Include="Tweakers.Master" />
+    <Content Include="Producten.aspx" />
+    <Content Include="Shops.aspx" />
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,22 +83,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Recourses\bootstrap-theme.css" />
-    <Content Include="Recourses\bootstrap-theme.min.css" />
-    <Content Include="Recourses\bootstrap.css" />
-    <Content Include="Recourses\bootstrap.min.css" />
+    <Content Include="Resources\bootstrap-theme.css" />
+    <Content Include="Resources\bootstrap-theme.min.css" />
+    <Content Include="Resources\bootstrap.css" />
+    <Content Include="Resources\bootstrap.min.css" />
+    <Content Include="Resources\Homepage.jpg" />
+    <Content Include="Smartphones.aspx" />
+    <Content Include="Tablets.aspx" />
+    <Content Include="Wasmachines.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Database.cs" />
     <Compile Include="Data\GebruikerOracleContext.cs" />
     <Compile Include="Data\IGebruiker.cs" />
-    <Compile Include="Homepage.aspx.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Homepage.aspx.designer.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Koelkasten.aspx.cs">
+      <DependentUpon>Koelkasten.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Koelkasten.aspx.designer.cs">
+      <DependentUpon>Koelkasten.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logic\GebruikerRepository.cs" />
     <Compile Include="Models\Beoordeling.cs" />
@@ -111,12 +125,48 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tweakers.masterpage.cs">
+    <Compile Include="Producten.aspx.cs">
+      <DependentUpon>Producten.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tweakers.masterpage.designer.cs">
-      <DependentUpon>Tweakers.masterpage.cs</DependentUpon>
+    <Compile Include="Producten.aspx.designer.cs">
+      <DependentUpon>Producten.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shops.aspx.cs">
+      <DependentUpon>Shops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shops.aspx.designer.cs">
+      <DependentUpon>Shops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Smartphones.aspx.cs">
+      <DependentUpon>Smartphones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Smartphones.aspx.designer.cs">
+      <DependentUpon>Smartphones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablets.aspx.cs">
+      <DependentUpon>Tablets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablets.aspx.designer.cs">
+      <DependentUpon>Tablets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wasmachines.aspx.cs">
+      <DependentUpon>Wasmachines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wasmachines.aspx.designer.cs">
+      <DependentUpon>Wasmachines.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

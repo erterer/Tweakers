@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Tweakers
 {
-    public partial class Tweakers : System.Web.UI.MasterPage
+    public partial class Wasmachines : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

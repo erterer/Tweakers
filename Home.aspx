@@ -1,0 +1,12 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Tweakers.Home" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <br />
+    <br />
+    <h1>Welkom op de Pricewatch!</h1>
+    <img src="Resources/Homepage.jpg" class="img-responsive" alt="Homepage"/> 
+    <br />
+    <p>
+        Disclamer: Dit is een kleine versie van de Pricewatch, hier zitten niet alle elementen in!
+        Tevens is dit een andere layout die simpeler is dan de echte Pricewatch.
+     </p>
+</asp:Content>
