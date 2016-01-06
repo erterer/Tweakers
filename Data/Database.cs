@@ -87,7 +87,7 @@ namespace Tweakers.Data
         {
             try
             {
-                if (conn.State == ConnectionState.Closed) conn.Open();
+                conn.Open();
                 command.ExecuteNonQuery();
                 return true;
             }
@@ -100,6 +100,15 @@ namespace Tweakers.Data
         public void CloseConnection()
         {
             conn.Close();
+        }
+
+        /// <summary>
+        /// Openen van de database connectie
+        /// Deze wordt gebruikt voor connecties vanuit een nonquery
+        /// </summary>
+        public void OpenConnection()
+        {
+            conn.Open();
         }
     }
 }

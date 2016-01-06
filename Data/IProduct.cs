@@ -9,6 +9,7 @@ namespace Tweakers.Data
 {
     public interface IProduct
     {
+        bool GetAllSmartphones(out List<IProduct>
         bool AddProduct(Product product, string categorie);
 
         bool BewerkProduct(Product product);

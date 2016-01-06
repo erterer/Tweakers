@@ -19,7 +19,6 @@ namespace Tweakers.Data
         public ShopOracleContext()
         {
             database = new Database();
-           
         }
 
         /// <summary>
@@ -52,7 +51,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                //conn.Close();
+                database.CloseConnection();
             }
         }
 
@@ -87,7 +86,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                //conn.Close();
+                database.CloseConnection();
             }
 
             try
@@ -97,6 +96,7 @@ namespace Tweakers.Data
                 OracleCommand command = database.CreateOracleCommand(query);
                 command.Parameters.Add("id", id);
                 command.Parameters.Add("naam", naam);
+                database.OpenConnection();
                 command.ExecuteNonQuery();
                 return true;
             }
@@ -106,7 +106,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                //conn.Close();
+                database.CloseConnection();
             }
         }
 
@@ -122,6 +122,7 @@ namespace Tweakers.Data
                 string query = "DELETE FROM SHOP WHERE NAAM = :naam";
                 OracleCommand command = database.CreateOracleCommand(query);
                 command.Parameters.Add("naam", shop);
+                database.OpenConnection();
                 command.ExecuteNonQuery();
                 return true;
             }
@@ -131,7 +132,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                //conn.Close();
+                database.CloseConnection();
             }
         }
     }

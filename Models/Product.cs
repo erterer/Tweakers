@@ -8,15 +8,12 @@ namespace Tweakers.Classes
 {
     public class Product
     {
-        //Lijst voor alle uitoeringen van een product
-        private List<ProductUitvoering> types;
         //Naam van een product
         public string Naam { get; set; }
 
         public Product(string naam)
         {
             Naam = naam;
-            types = new List<ProductUitvoering>();
         }
         /// <summary>
         /// 

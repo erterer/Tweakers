@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tweakers.Classes
 {
-    public class ProductUitvoering
+    public class ProductUitvoering : Product
     {
         //Lijst voor het bijhouden van alle specificaties van een product
         private List<Specificatie> specificaties;

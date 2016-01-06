@@ -10,9 +10,14 @@ namespace Tweakers.Data
 {
     public class ProductOracleContext : IProduct
     {
-        Database database = new Database();
-        private OracleConnection conn;
-        private OracleCommand command;
+        Database database;
+
+        public ProductOracleContext()
+        {
+            database = new Database();
+        }
+
+
 
         public bool AddProduct(Product product, string categorie)
         {
