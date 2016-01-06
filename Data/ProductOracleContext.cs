@@ -28,9 +28,9 @@ namespace Tweakers.Data
                 OracleDataReader datareader = database.ExecuteQuery(command);
                 while (datareader.Read())
                 {
-                    string naam = Convert.ToString(datareader["p.NAAM"]);
-                    string uitvoering = Convert.ToString(datareader["u.UITVOERING"]);
-                    string kleur = Convert.ToString(datareader["u.KLEUR"]);
+                    string naam = Convert.ToString(datareader["NAAM"]);
+                    string uitvoering = Convert.ToString(datareader["UITVOERING"]);
+                    string kleur = Convert.ToString(datareader["KLEUR"]);
                     koelkasten.Add(new ProductUitvoering(naam, uitvoering, kleur));
                 }
                 return true;

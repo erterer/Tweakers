@@ -14,6 +14,7 @@ namespace Tweakers
     {
         private List<ProductUitvoering> producten;
         private ProductRepository repo;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             producten = new List<ProductUitvoering>();
@@ -42,7 +43,12 @@ namespace Tweakers
                 l.NavigateUrl = "~/" + p.Naam + ".aspx";
 
                 TableCell c4 = new TableCell();
-                c2.Controls.Add(l);
+                c4.Controls.Add(l);
+
+                //TableHeaderCell1.Text = "Naam";
+                //TableHeaderCell2.Text = "Uitvoering";
+                //TableHeaderCell3.Text = "Kleur";
+                //TableHeaderCell4.Text = "Specificaties";
 
                 TableRow row = new TableRow();
                 row.Controls.Add(c1);
