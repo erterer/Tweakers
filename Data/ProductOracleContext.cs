@@ -17,7 +17,48 @@ namespace Tweakers.Data
             database = new Database();
         }
 
+        public bool GetAllKoelkasten(out List<ProductUitvoering> koelkasten)
+        {
+            koelkasten = new List<ProductUitvoering>();
 
+            try
+            {
+                string query = "SELECT p.NAAM, u.UITVOERING, u.KLEUR FROM product p, productuitvoering u WHERE p.id = u.product_id AND p.categorie_id = 5";
+                OracleCommand command = database.CreateOracleCommand(query);
+                OracleDataReader datareader = database.ExecuteQuery(command);
+                while (datareader.Read())
+                {
+                    string naam = Convert.ToString(datareader["p.NAAM"]);
+                    string uitvoering = Convert.ToString(datareader["u.UITVOERING"]);
+                    string kleur = Convert.ToString(datareader["u.KLEUR"]);
+                    koelkasten.Add(new ProductUitvoering(naam, uitvoering, kleur));
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                database.CloseConnection();
+            }
+        }
+
+        public bool GetAllSmartphones(out List<ProductUitvoering> smartphones)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool GetAllTablets(out List<ProductUitvoering> tablets)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool GetAllWasmachines(out List<ProductUitvoering> wasmachines)
+        {
+            throw new NotImplementedException();
+        }
 
         public bool AddProduct(Product product, string categorie)
         {
@@ -43,7 +84,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                conn.Close();
+                database.CloseConnection();
             }
 
             try
@@ -66,7 +107,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                conn.Close();
+                database.CloseConnection();
             }
 
             try
@@ -77,7 +118,7 @@ namespace Tweakers.Data
                 command.Parameters.Add("id", id);
                 command.Parameters.Add("naam", product.Naam);
                 command.Parameters.Add("categorie_id", categorie_id);
-                conn.Open();
+                database.OpenConnection();
                 command.ExecuteNonQuery();
                 return true;
             }
@@ -85,7 +126,10 @@ namespace Tweakers.Data
             {
                 return false;
             }
-            finally { conn.Close(); }
+            finally
+            {
+                database.CloseConnection();
+            }
         }
 
         public bool AddProductUitvoering(ProductUitvoering productUitvoering, string product)
@@ -112,7 +156,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                conn.Close();
+                database.CloseConnection();
             }
 
             try
@@ -135,7 +179,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                conn.Close();
+                database.CloseConnection();
             }
 
             try
@@ -147,7 +191,7 @@ namespace Tweakers.Data
                 command.Parameters.Add("naam", productUitvoering.Naam);
                 command.Parameters.Add("kleur", productUitvoering.Kleur);
                 command.Parameters.Add("product_id", categorie_id);
-                conn.Open();
+                database.OpenConnection();
                 command.ExecuteNonQuery();
                 return true;
             }
@@ -155,7 +199,10 @@ namespace Tweakers.Data
             {
                 return false;
             }
-            finally { conn.Close(); }
+            finally
+            {
+                database.CloseConnection();
+            }
         }
 
         public bool BewerkProduct(Product product)

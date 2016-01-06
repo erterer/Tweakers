@@ -13,14 +13,15 @@ namespace Tweakers.Classes
         private List<Specificatie> specificaties;
 
         //Naam van de uitvoering
-        public string Naam { get; }
+        public string Uitvoering { get; }
 
         //Kleur van de uitvoering
-        public Color Kleur { get; }
+        public string Kleur { get; }
 
-        public ProductUitvoering(string naam, Color kleur)
+        public ProductUitvoering(string naam, string uitvoering, string kleur)
+            : base(naam)
         {
-            Naam = naam;
+            Uitvoering = uitvoering;
             Kleur = kleur;
         }
 

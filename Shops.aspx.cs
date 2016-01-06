@@ -37,7 +37,7 @@ namespace Tweakers
                 c1.Text = s.Naam;
 
                 HyperLink l = new HyperLink();
-                l.Text = "View";
+                l.Text = "Details";
                 l.NavigateUrl = "http://google.co.in/search?q=" + s.Naam;
 
                 TableCell c2 = new TableCell();

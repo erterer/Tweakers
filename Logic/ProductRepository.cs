@@ -11,7 +11,16 @@ namespace Tweakers.Logic
     public class ProductRepository
     {
         public IProduct context;
+        public List<ProductUitvoering> _producten = new List<ProductUitvoering>();
 
+        public ProductRepository(IProduct context)
+        {
+            this.context = context;
+        }
 
+        public bool GetAllKoelkasten()
+        {
+            return context.GetAllKoelkasten(out _producten);
+        }
     }
 }
