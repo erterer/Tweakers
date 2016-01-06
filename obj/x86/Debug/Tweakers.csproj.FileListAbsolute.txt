@@ -15,5 +15,7 @@ C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\bin\
 C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\bin\Tweakers.pdb
 C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\obj\Debug\Tweakers.dll
-C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\obj\Debug\Tweakers.pdb
+C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\obj\x86\Debug\Tweakers.dll
+C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\obj\x86\Debug\Tweakers.pdb
+C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\bin\Oracle.ManagedDataAccess.dll
+C:\Users\Sven\Fontys\P3\SE2\Week 10+\Individuele opdracht\Tweakers\Tweakers\obj\x86\Debug\Tweakers.csprojResolveAssemblyReference.cache

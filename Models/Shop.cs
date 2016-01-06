@@ -8,20 +8,22 @@ namespace Tweakers.Classes
 {
     public class Shop
     {
-        //Naam van de winkel
-        private string Naam { get; set; }
+        /// <summary>
+        /// De naam van een winkel
+        /// </summary>
+        public string Naam { get; }
 
-        //Weburl van de winkel
-        private string Url { get; set; }
-
-        public Shop(string naam, string url)
+        /// <summary>
+        /// Zetten van de naam
+        /// </summary>
+        /// <param name="naam"></param>
+        public Shop(string naam)
         {
             Naam = naam;
-            Url = url;
         }
 
         /// <summary>
-        /// 
+        /// Opvragen van de beoordeling van een winkel
         /// </summary>
         /// <param name="shop"></param>
         /// <returns></returns>
@@ -31,7 +33,7 @@ namespace Tweakers.Classes
         }
 
         /// <summary>
-        /// 
+        /// Een product toevoegen aan een shop, hier wordt tevens de prijs meegegeven en of het product leverbaar is
         /// </summary>
         /// <param name="product"></param>
         /// <param name="shop"></param>

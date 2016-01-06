@@ -11,14 +11,12 @@ namespace Tweakers.Classes
         //Lijst voor alle uitoeringen van een product
         private List<ProductUitvoering> types;
         //Naam van een product
-        private string Naam { get; }
-        //Merk van het product
-        private string Merk { get; }
+        public string Naam { get; set; }
 
-        public Product(string naam, string merk)
+        public Product(string naam)
         {
             Naam = naam;
-            Merk = merk;
+            types = new List<ProductUitvoering>();
         }
         /// <summary>
         /// 
