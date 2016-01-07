@@ -7,5 +7,16 @@
     <p><%=NotAvailable%></p>
     <asp:Table ID="TableSamsungS31" class="table" runat="server">
     </asp:Table>
+    <div class="row">
+  <div class="col-md-4">
+      <img src="../Resources/S31.jpeg" class="img-responsive" />
+  </div>
+  <div class="col-md-4">
+      <img src="../Resources/S33.jpeg" class="img-responsive" />
+  </div>
+  <div class="col-md-4">
+      <img src="../Resources/S32.jpeg" class="img-responsive" />
+  </div>
+</div>
     <br /> 
 </asp:Content>
