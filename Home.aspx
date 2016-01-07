@@ -6,7 +6,9 @@
     <img src="Resources/Homepage.jpg" class="img-responsive" alt="Homepage"/> 
     <br />
     <p>
-        Disclamer: Dit is een kleine versie van de Pricewatch, hier zitten niet alle elementen in!
+        Disclaimer: Dit is een kleine versie van de Pricewatch, hier zitten niet alle elementen in!
         Tevens is dit een andere layout die simpeler is dan de echte Pricewatch.
+        <br />
+        Zie <a runat="server" href="http://tweakers.net/pricewatch/">Pricewatch</a>
      </p>
 </asp:Content>

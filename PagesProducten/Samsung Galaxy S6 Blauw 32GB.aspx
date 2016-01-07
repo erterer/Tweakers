@@ -3,7 +3,7 @@
     <br />
     <br />
     <br />
-    <h1>Siemens KG36EBW40</h1>
+    <h1>Samsung Galaxy S6 Blauw 32GB</h1>
     <p><%=NotAvailable%></p>
     <asp:Table ID="TableSamsungS61" class="table" runat="server">
     </asp:Table>
