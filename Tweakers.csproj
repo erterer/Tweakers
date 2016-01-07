@@ -72,6 +72,8 @@
     <Content Include="Koelkasten.aspx" />
     <Content Include="packages.config" />
     <Content Include="Producten.aspx" />
+    <Content Include="Producten\LG GBB539PZCFE.aspx" />
+    <Content Include="Producten\Siemens KG36EBW40.aspx" />
     <Content Include="Shops.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -99,8 +101,10 @@
     <Compile Include="Data\IGebruiker.cs" />
     <Compile Include="Data\IProduct.cs" />
     <Compile Include="Data\IShop.cs" />
+    <Compile Include="Data\ISpecificatie.cs" />
     <Compile Include="Data\ProductOracleContext.cs" />
     <Compile Include="Data\ShopOracleContext.cs" />
+    <Compile Include="Data\SpecificatieOracleContext.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,6 +122,7 @@
     <Compile Include="Logic\GebruikerRepository.cs" />
     <Compile Include="Logic\ProductRepository.cs" />
     <Compile Include="Logic\ShopRepository.cs" />
+    <Compile Include="Logic\SpecificatieRepository.cs" />
     <Compile Include="Models\Beoordeling.cs" />
     <Compile Include="Models\Categorie.cs" />
     <Compile Include="Models\Filter.cs" />
@@ -137,6 +142,20 @@
     </Compile>
     <Compile Include="Producten.aspx.designer.cs">
       <DependentUpon>Producten.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Producten\LG GBB539PZCFE.aspx.cs">
+      <DependentUpon>LG GBB539PZCFE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Producten\LG GBB539PZCFE.aspx.designer.cs">
+      <DependentUpon>LG GBB539PZCFE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Producten\Siemens KG36EBW40.aspx.cs">
+      <DependentUpon>Siemens KG36EBW40.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Producten\Siemens KG36EBW40.aspx.designer.cs">
+      <DependentUpon>Siemens KG36EBW40.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shops.aspx.cs">

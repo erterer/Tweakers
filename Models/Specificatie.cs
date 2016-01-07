@@ -9,10 +9,10 @@ namespace Tweakers.Classes
     public class Specificatie
     {
         //Naam van de specificatie
-        private string Naam { get; set; }
+        public string Naam { get; }
 
         //Waarde van de bijbehorende specificatie
-        private string Waarde { get; set; }
+        public string Waarde { get; }
 
         public Specificatie(string naam, string waarde)
         {

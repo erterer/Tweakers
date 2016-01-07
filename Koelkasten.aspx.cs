@@ -40,7 +40,7 @@ namespace Tweakers
 
                 HyperLink l = new HyperLink();
                 l.Text = "View";
-                l.NavigateUrl = "~/" + p.Naam + ".aspx";
+                l.NavigateUrl = "~/Producten/" + p.Naam + ".aspx";
 
                 TableCell c4 = new TableCell();
                 c4.Controls.Add(l);
