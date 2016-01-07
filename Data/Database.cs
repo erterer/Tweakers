@@ -15,9 +15,6 @@ namespace Tweakers.Data
         private string user = "dbi334041"; //User name of the database
         private string pw = "EG4DSBe1fC"; // password of the database
         private string dataSource = "//192.168.15.50:1521/fhictora";
-        //private string user = "system";
-        //private string pw = "EG4DSBe1fC";
-        //private string dataSource = "localhost:1521";
         
         /// <summary>
         /// Initialisatie van de database

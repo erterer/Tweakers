@@ -73,9 +73,16 @@
     <Content Include="Koelkasten.aspx" />
     <Content Include="packages.config" />
     <Content Include="PagesProducten\LG GBB539PZCFE.aspx" />
+    <Content Include="PagesProducten\Samsung Galaxy S3 Blauw 8GB.aspx" />
+    <Content Include="PagesProducten\Samsung Galaxy S3 Wit 16GB.aspx" />
+    <Content Include="PagesProducten\Samsung Galaxy S6 Blauw 32GB.aspx" />
+    <Content Include="PagesProducten\Samsung Galaxy S6 Blauw 64GB.aspx" />
     <Content Include="PagesProducten\Siemens KG36EBW40.aspx" />
     <Content Include="Resources\LG GBB539PZCFE afbeelding 1.jpeg" />
     <Content Include="Resources\LG GBB539PZCFE afbeelding 2.jpeg" />
+    <Content Include="Resources\S61.jpeg" />
+    <Content Include="Resources\S62.jpeg" />
+    <Content Include="Resources\S63.jpeg" />
     <Content Include="Shops.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -149,6 +156,34 @@
     </Compile>
     <Compile Include="PagesProducten\LG GBB539PZCFE.aspx.designer.cs">
       <DependentUpon>LG GBB539PZCFE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesProducten\Samsung Galaxy S3 Blauw 8GB.aspx.cs">
+      <DependentUpon>Samsung Galaxy S3 Blauw 8GB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesProducten\Samsung Galaxy S3 Blauw 8GB.aspx.designer.cs">
+      <DependentUpon>Samsung Galaxy S3 Blauw 8GB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesProducten\Samsung Galaxy S3 Wit 16GB.aspx.cs">
+      <DependentUpon>Samsung Galaxy S3 Wit 16GB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesProducten\Samsung Galaxy S3 Wit 16GB.aspx.designer.cs">
+      <DependentUpon>Samsung Galaxy S3 Wit 16GB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesProducten\Samsung Galaxy S6 Blauw 32GB.aspx.cs">
+      <DependentUpon>Samsung Galaxy S6 Blauw 32GB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesProducten\Samsung Galaxy S6 Blauw 32GB.aspx.designer.cs">
+      <DependentUpon>Samsung Galaxy S6 Blauw 32GB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesProducten\Samsung Galaxy S6 Blauw 64GB.aspx.cs">
+      <DependentUpon>Samsung Galaxy S6 Blauw 64GB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesProducten\Samsung Galaxy S6 Blauw 64GB.aspx.designer.cs">
+      <DependentUpon>Samsung Galaxy S6 Blauw 64GB.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagesProducten\Siemens KG36EBW40.aspx.cs">
       <DependentUpon>Siemens KG36EBW40.aspx</DependentUpon>

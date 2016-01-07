@@ -22,5 +22,10 @@ namespace Tweakers.Logic
         {
             return context.GetAllKoelkasten(out _producten);
         }
+
+        public bool GetAllSmartphones()
+        {
+            return context.GetAllSmartphones(out _producten);
+        }
     }
 }

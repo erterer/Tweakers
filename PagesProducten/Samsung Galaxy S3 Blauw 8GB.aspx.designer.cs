@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tweakers {
+namespace Tweakers.PagesProducten {
     
     
-    public partial class Smartphones {
+    public partial class Samsung_Galaxy_S3_Blauw_8GB {
         
         /// <summary>
-        /// TableSmartphones control.
+        /// TableSamsungS31 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table TableSmartphones;
+        protected global::System.Web.UI.WebControls.Table TableSamsungS31;
     }
 }
