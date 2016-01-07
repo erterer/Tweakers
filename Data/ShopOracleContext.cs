@@ -10,15 +10,14 @@ namespace Tweakers.Data
 {
     public class ShopOracleContext : IShop
     {
-        Database database;
-
+        public Database Database { get; }
 
         /// <summary>
         /// Constructor, hier wordt de verbinding naar de database gemaakt
         /// </summary>
         public ShopOracleContext()
         {
-            database = new Database();
+            Database = new Database();
         }
 
         /// <summary>
@@ -34,8 +33,8 @@ namespace Tweakers.Data
             try
             {
                 string query = "SELECT NAAM FROM shop";
-                OracleCommand command = database.CreateOracleCommand(query);
-                OracleDataReader datareader = database.ExecuteQuery(command);
+                OracleCommand command = Database.CreateOracleCommand(query);
+                OracleDataReader datareader = Database.ExecuteQuery(command);
                 while (datareader.Read())
                 {
                     if (datareader["NAAM"] != System.DBNull.Value)
@@ -51,7 +50,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                database.CloseConnection();
+                Database.CloseConnection();
             }
         }
 
@@ -67,8 +66,8 @@ namespace Tweakers.Data
             try
             {
                 string query = "SELECT MAX(ID) FROM shop";
-                OracleCommand command = database.CreateOracleCommand(query);
-                OracleDataReader datareader = database.ExecuteQuery(command);
+                OracleCommand command = Database.CreateOracleCommand(query);
+                OracleDataReader datareader = Database.ExecuteQuery(command);
                 if (command.ExecuteScalar() == System.DBNull.Value)
                 {
                     id = 1;
@@ -86,17 +85,17 @@ namespace Tweakers.Data
             }
             finally
             {
-                database.CloseConnection();
+                Database.CloseConnection();
             }
 
             try
             {
                 string query = "INSERT INTO SHOP(id, naam)" +
                     "VALUES(:id, :naam)";
-                OracleCommand command = database.CreateOracleCommand(query);
+                OracleCommand command = Database.CreateOracleCommand(query);
                 command.Parameters.Add("id", id);
                 command.Parameters.Add("naam", naam);
-                database.OpenConnection();
+                Database.OpenConnection();
                 command.ExecuteNonQuery();
                 return true;
             }
@@ -106,23 +105,23 @@ namespace Tweakers.Data
             }
             finally
             {
-                database.CloseConnection();
+                Database.CloseConnection();
             }
         }
 
         /// <summary>
         /// Door middel van de naam wordt er een shop verwijderd uit de database
         /// </summary>
-        /// <param name="shop">Naam vand e winkel</param>
+        /// <param name="shop">Naam van de winkel</param>
         /// <returns>True als het is gelukt, anders false</returns>
         public bool RemoveShop(string shop)
         {
             try
             {
                 string query = "DELETE FROM SHOP WHERE NAAM = :naam";
-                OracleCommand command = database.CreateOracleCommand(query);
+                OracleCommand command = Database.CreateOracleCommand(query);
                 command.Parameters.Add("naam", shop);
-                database.OpenConnection();
+                Database.OpenConnection();
                 command.ExecuteNonQuery();
                 return true;
             }
@@ -132,7 +131,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                database.CloseConnection();
+                Database.CloseConnection();
             }
         }
     }

@@ -10,11 +10,11 @@ namespace Tweakers.Data
 {
     public class ProductOracleContext : IProduct
     {
-        Database database;
+        public Database Database { get;}
 
         public ProductOracleContext()
         {
-            database = new Database();
+            Database = new Database();
         }
 
         public bool GetAllKoelkasten(out List<ProductUitvoering> koelkasten)
@@ -24,8 +24,8 @@ namespace Tweakers.Data
             try
             {
                 string query = "SELECT p.NAAM, u.UITVOERING, u.KLEUR FROM product p, productuitvoering u WHERE p.id = u.product_id AND p.categorie_id = 5";
-                OracleCommand command = database.CreateOracleCommand(query);
-                OracleDataReader datareader = database.ExecuteQuery(command);
+                OracleCommand command = Database.CreateOracleCommand(query);
+                OracleDataReader datareader = Database.ExecuteQuery(command);
                 while (datareader.Read())
                 {
                     string naam = Convert.ToString(datareader["NAAM"]);
@@ -41,7 +41,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                database.CloseConnection();
+                Database.CloseConnection();
             }
         }
 
@@ -52,8 +52,8 @@ namespace Tweakers.Data
             try
             {
                 string query = "SELECT p.NAAM, u.UITVOERING, u.KLEUR FROM product p, productuitvoering u WHERE p.id = u.product_id AND p.categorie_id = 2";
-                OracleCommand command = database.CreateOracleCommand(query);
-                OracleDataReader datareader = database.ExecuteQuery(command);
+                OracleCommand command = Database.CreateOracleCommand(query);
+                OracleDataReader datareader = Database.ExecuteQuery(command);
                 while (datareader.Read())
                 {
                     string naam = Convert.ToString(datareader["NAAM"]);
@@ -69,7 +69,7 @@ namespace Tweakers.Data
             }
             finally
             {
-                database.CloseConnection();
+                Database.CloseConnection();
             }
         }
     }

@@ -29,7 +29,7 @@ namespace Tweakers
         {
             Remove();
             repo.GetAllShops();
-            shops = repo._shops;
+            shops = repo.Shops;
 
             foreach (var s in shops)
             {

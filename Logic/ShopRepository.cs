@@ -11,7 +11,7 @@ namespace Tweakers.Logic
     public class ShopRepository
     {
         private IShop context;
-        public List<Shop> _shops = new List<Shop>();
+        public List<Shop> Shops = new List<Shop>();
 
         /// <summary>
         /// Aanmaken van de repository en de verwijzing naar de methodes
@@ -28,7 +28,7 @@ namespace Tweakers.Logic
         /// <returns>:Lijst met de winkels</returns>
         public bool GetAllShops()
         {
-            return context.GetAllShops(out _shops);
+            return context.GetAllShops(out Shops);
         }
 
         /// <summary>

@@ -19,7 +19,7 @@ namespace Tweakers.PagesProducten
         protected void Page_Load(object sender, EventArgs e)
         {
             repo.GetAllSpecificaties("Samsung Galaxy S3 Wit 16GB");
-            specs = repo._specs;
+            specs = repo.Specs;
 
             foreach (var s in specs)
             {

@@ -10,8 +10,8 @@ namespace Tweakers.Logic
 {
     public class ProductRepository
     {
-        public IProduct context;
-        public List<ProductUitvoering> _producten = new List<ProductUitvoering>();
+        private IProduct context;
+        public List<ProductUitvoering> Producten = new List<ProductUitvoering>();
 
         public ProductRepository(IProduct context)
         {
@@ -20,12 +20,12 @@ namespace Tweakers.Logic
 
         public bool GetAllKoelkasten()
         {
-            return context.GetAllKoelkasten(out _producten);
+            return context.GetAllKoelkasten(out Producten);
         }
 
         public bool GetAllSmartphones()
         {
-            return context.GetAllSmartphones(out _producten);
+            return context.GetAllSmartphones(out Producten);
         }
     }
 }

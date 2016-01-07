@@ -10,7 +10,7 @@ namespace Tweakers.Logic
 {
     public class SpecificatieRepository
     {
-        public List<Specificatie> _specs = new List<Specificatie>();
+        public List<Specificatie> Specs = new List<Specificatie>();
         private ISpecificatie context;
 
         public SpecificatieRepository(ISpecificatie context)
@@ -18,9 +18,15 @@ namespace Tweakers.Logic
             this.context = context;
         }
 
+        /// <summary>
+        /// Deze methode haalt alle specificaties op van een bepaald product
+        /// </summary>
+        /// <param name="product">Het product waarvan de specificaties moeten worden opgehaald</param>
+        /// <param name="specs">De lijst met specificaties die worden teruggegeven</param>
+        /// <returns>De lijst met specificaties</returns>
         public bool GetAllSpecificaties(string product)
         {
-            return context.GetAllSpecificaties(product, out _specs);
+            return context.GetAllSpecificaties(product, out Specs);
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
-using System.Data;
 
 namespace Tweakers.Data
 {
@@ -55,7 +55,10 @@ namespace Tweakers.Data
                 while (reader.Read()) result.Add(reader);
                 return result;
             }
-            catch { return null; }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -72,7 +75,10 @@ namespace Tweakers.Data
                 // reader.Read();
                 return reader;
             }
-            catch { return null; }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -88,7 +94,10 @@ namespace Tweakers.Data
                 command.ExecuteNonQuery();
                 return true;
             }
-            catch { return false; }
+            catch
+            {
+                return false;
+            }
         }
 
         /// <summary>

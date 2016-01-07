@@ -19,9 +19,6 @@ namespace Tweakers.Classes
         //Soort beoordeling
         public TypeBeoordeling Type { get; set; }
 
-        //Gebruiker
-        public Gebruiker Gebruiker { get; set; }
-
         //Shop
         public Shop Shop { get; set; }
 
@@ -31,10 +28,9 @@ namespace Tweakers.Classes
         //Beoordeling
         public int Waarde { get; set; }
 
-        public Beoordeling(TypeBeoordeling type, Gebruiker gebruiker, Shop shop, ProductUitvoering product, int waarde)
+        public Beoordeling(TypeBeoordeling type, Shop shop, ProductUitvoering product, int waarde)
         {
             Type = type;
-            Gebruiker = gebruiker;
             Shop = shop;
             Product = product;
             Waarde = waarde;

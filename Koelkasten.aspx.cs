@@ -25,7 +25,7 @@ namespace Tweakers
         {
             Remove();
             repo.GetAllKoelkasten();
-            producten = repo._producten;
+            producten = repo.Producten;
 
             foreach (var p in producten)
             {

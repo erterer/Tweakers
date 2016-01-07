@@ -111,8 +111,6 @@
       <DependentUpon>Categorien.aspx</DependentUpon>
     </Compile>
     <Compile Include="Data\Database.cs" />
-    <Compile Include="Data\GebruikerOracleContext.cs" />
-    <Compile Include="Data\IGebruiker.cs" />
     <Compile Include="Data\IProduct.cs" />
     <Compile Include="Data\IShop.cs" />
     <Compile Include="Data\ISpecificatie.cs" />
@@ -133,15 +131,15 @@
     <Compile Include="Koelkasten.aspx.designer.cs">
       <DependentUpon>Koelkasten.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Logic\GebruikerRepository.cs" />
     <Compile Include="Logic\ProductRepository.cs" />
     <Compile Include="Logic\ShopRepository.cs" />
     <Compile Include="Logic\SpecificatieRepository.cs" />
     <Compile Include="Models\Beoordeling.cs" />
     <Compile Include="Models\Categorie.cs" />
     <Compile Include="Models\Filter.cs" />
-    <Compile Include="Models\Gebruiker.cs" />
-    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Product.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="Models\ProductShopDetails.cs" />
     <Compile Include="Models\ProductUitvoering.cs" />
     <Compile Include="Models\Review.cs" />

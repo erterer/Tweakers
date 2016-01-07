@@ -36,20 +36,14 @@ namespace Tweakers.Classes
         //Product
         public ProductUitvoering Product { get; set; }
 
-        //Gebruiker
-        public Gebruiker Gebruiker { get; set; }
-
-
-        public Review(SoortReview soort, string naam, Beoordeling beoordeling, string opmerking, DateTime datum, Shop shop, Gebruiker gebruiker, ProductUitvoering product)
+        public Review(SoortReview soort, string naam, Beoordeling beoordeling, string opmerking, DateTime datum, Shop shop, ProductUitvoering product)
         {
             Soort = soort;
             Beoordeling = beoordeling;
             Opmerking = opmerking;
             Datum = datum;
             Shop = shop;
-            Gebruiker = gebruiker;
             Product = product;
-
         }
     }
 }

@@ -12,14 +12,14 @@ namespace Tweakers.Producten
 {
     public partial class LG_GBB539PZCFE : System.Web.UI.Page
     {
-        public string NotAvailable = "";
+        public string NotAvailable = string.Empty;
         private List<Specificatie> specs = new List<Specificatie>();
         private SpecificatieRepository repo = new SpecificatieRepository(new SpecificatieOracleContext());
 
         protected void Page_Load(object sender, EventArgs e)
         {
             repo.GetAllSpecificaties("LG GBB539PZCFE");
-            specs = repo._specs;
+            specs = repo.Specs;
 
             foreach (var s in specs)
             {

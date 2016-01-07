@@ -8,9 +8,6 @@ namespace Tweakers.Classes
 {
     public class Categorie
     {
-        //Lijst voor alle producten die in een bepaalde categorie zitten
-        private List<Product> Producten;
-
         //Naam van de categorie
         private string Naam { get; }
 
@@ -18,7 +15,6 @@ namespace Tweakers.Classes
         public Categorie(string naam)
         {
             Naam = naam;
-            Producten = new List<Product>();
         }
     }
 }

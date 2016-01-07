@@ -19,7 +19,7 @@ namespace Tweakers.Producten
         protected void Page_Load(object sender, EventArgs e)
         {
             repo.GetAllSpecificaties("Siemens KG36EBW40");
-            specs = repo._specs;
+            specs = repo.Specs;
 
             foreach (var s in specs)
             {

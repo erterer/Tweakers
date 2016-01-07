@@ -21,8 +21,8 @@ namespace Tweakers.Classes
         public ProductUitvoering(string naam, string uitvoering, string kleur)
             : base(naam)
         {
-            Uitvoering = uitvoering;
-            Kleur = kleur;
+            this.Uitvoering = uitvoering;
+            this.Kleur = kleur;
         }
 
         /// <summary>
