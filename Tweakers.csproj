@@ -93,8 +93,6 @@
     <Content Include="Resources\bootstrap.min.css" />
     <Content Include="Resources\Homepage.jpg" />
     <Content Include="Smartphones.aspx" />
-    <Content Include="Tablets.aspx" />
-    <Content Include="Wasmachines.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -180,20 +178,6 @@
     </Compile>
     <Compile Include="Smartphones.aspx.designer.cs">
       <DependentUpon>Smartphones.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Tablets.aspx.cs">
-      <DependentUpon>Tablets.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Tablets.aspx.designer.cs">
-      <DependentUpon>Tablets.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Wasmachines.aspx.cs">
-      <DependentUpon>Wasmachines.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Wasmachines.aspx.designer.cs">
-      <DependentUpon>Wasmachines.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
