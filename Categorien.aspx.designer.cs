@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tweakers.Producten
+namespace Tweakers
 {
 
 
-    public partial class LG_GBB539PZCFE
+    public partial class Categorien
     {
     }
 }

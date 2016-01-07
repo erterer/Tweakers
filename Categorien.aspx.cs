@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Tweakers.Producten
+namespace Tweakers
 {
-    public partial class LG_GBB539PZCFE : System.Web.UI.Page
+    public partial class Categorien : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -40,15 +40,10 @@ namespace Tweakers
 
                 HyperLink l = new HyperLink();
                 l.Text = "View";
-                l.NavigateUrl = "~/Producten/" + p.Naam + ".aspx";
+                l.NavigateUrl = "~/PagesProducten/" + p.Naam + ".aspx";
 
                 TableCell c4 = new TableCell();
                 c4.Controls.Add(l);
-
-                //TableHeaderCell1.Text = "Naam";
-                //TableHeaderCell2.Text = "Uitvoering";
-                //TableHeaderCell3.Text = "Kleur";
-                //TableHeaderCell4.Text = "Specificaties";
 
                 TableRow row = new TableRow();
                 row.Controls.Add(c1);

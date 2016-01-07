@@ -4,6 +4,7 @@
     <br />
     <br />
     <h1>Siemens KG36EBW40</h1>
+    <p><%=NotAvailable%></p>
     <asp:Table ID="TableSiemens" class="table" runat="server">
     </asp:Table>
     <br /> 

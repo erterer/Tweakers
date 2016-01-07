@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tweakers {
+namespace Tweakers.Producten {
     
     
-    public partial class Koelkasten {
+    public partial class LG_GBB539PZCFE {
         
         /// <summary>
-        /// TableKoelkasten control.
+        /// TableLG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table TableKoelkasten;
+        protected global::System.Web.UI.WebControls.Table TableLG;
     }
 }
