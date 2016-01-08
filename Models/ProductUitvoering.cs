@@ -9,9 +9,6 @@ namespace Tweakers.Classes
 {
     public class ProductUitvoering : Product
     {
-        //Lijst voor het bijhouden van alle specificaties van een product
-        private List<Specificatie> specificaties;
-
         //Naam van de uitvoering
         public string Uitvoering { get; }
 
@@ -21,8 +18,8 @@ namespace Tweakers.Classes
         public ProductUitvoering(string naam, string uitvoering, string kleur)
             : base(naam)
         {
-            this.Uitvoering = uitvoering;
-            this.Kleur = kleur;
+            Uitvoering = uitvoering;
+            Kleur = kleur;
         }
 
         /// <summary>

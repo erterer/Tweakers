@@ -12,7 +12,7 @@ namespace Tweakers.Producten
 {
     public partial class Siemens_KG36EBW40 : System.Web.UI.Page
     {
-        public string NotAvailable = "";
+        public string NotAvailable { get; set; }
         private List<Specificatie> specs = new List<Specificatie>();
         private SpecificatieRepository repo = new SpecificatieRepository(new SpecificatieOracleContext());
 
@@ -38,6 +38,10 @@ namespace Tweakers.Producten
             if(specs.Count == 0)
             {
                 NotAvailable = "Er zijn geen specificaties beschikbaar";
+            }
+            else
+            {
+                NotAvailable = string.Empty;
             }
         }
     }

@@ -12,7 +12,7 @@ namespace Tweakers.Producten
 {
     public partial class LG_GBB539PZCFE : System.Web.UI.Page
     {
-        public string NotAvailable = string.Empty;
+        public string NotAvailable { get; set; } 
         private List<Specificatie> specs = new List<Specificatie>();
         private SpecificatieRepository repo = new SpecificatieRepository(new SpecificatieOracleContext());
 
@@ -39,6 +39,10 @@ namespace Tweakers.Producten
             if (specs.Count == 0)
             {
                 NotAvailable = "Er zijn geen specificaties beschikbaar";
+            }
+            else
+            {
+                NotAvailable = string.Empty;
             }
         }
     }

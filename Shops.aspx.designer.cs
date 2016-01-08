@@ -31,13 +31,13 @@ namespace Tweakers {
         protected global::System.Web.UI.WebControls.TextBox tb_NewShop;
         
         /// <summary>
-        /// btn_ShopToevoegen control.
+        /// Btn_ShopToevoegen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_ShopToevoegen;
+        protected global::System.Web.UI.WebControls.Button Btn_ShopToevoegen;
         
         /// <summary>
         /// ddl_Shops control.
@@ -49,12 +49,12 @@ namespace Tweakers {
         protected global::System.Web.UI.WebControls.DropDownList ddl_Shops;
         
         /// <summary>
-        /// btn_ShopVerijderen control.
+        /// Btn_ShopVerijderen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_ShopVerijderen;
+        protected global::System.Web.UI.WebControls.Button Btn_ShopVerijderen;
     }
 }

@@ -9,11 +9,11 @@
     <div class="row">
         <div class="col-md-6">
             <asp:TextBox ID="tb_NewShop" class="form-group" runat="server"></asp:TextBox>
-            <asp:Button ID="btn_ShopToevoegen" class="btn btn-default" runat="server" Text="Shop Toevoegen" OnClick="btn_ShopToevoegen_Click" />
+            <asp:Button ID="Btn_ShopToevoegen" class="btn btn-default" runat="server" Text="Shop Toevoegen" OnClick="btn_ShopToevoegen_Click" />
         </div>
         <div class="col-md-6">
             <asp:DropDownList ID="ddl_Shops" class="dropdown" runat="server"></asp:DropDownList>
-            <asp:Button ID="btn_ShopVerijderen" class="btn btn-default" runat="server" Text="Shop Verwijderen" OnClick="btn_ShopVerijderen_Click" />
+            <asp:Button ID="Btn_ShopVerijderen" class="btn btn-default" runat="server" Text="Shop Verwijderen" OnClick="btn_ShopVerijderen_Click" />
         </div>
     </div>    
 </asp:Content>

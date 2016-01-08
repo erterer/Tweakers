@@ -62,13 +62,13 @@ namespace Tweakers
             ddl_Shops.Items.Clear();
         }
 
-        protected void btn_ShopToevoegen_Click(object sender, EventArgs e)
+        protected void Btn_ShopToevoegen_Click(object sender, EventArgs e)
         {
             repo.AddShop(tb_NewShop.Text);
             Refresh();
         }
 
-        protected void btn_ShopVerijderen_Click(object sender, EventArgs e)
+        protected void Btn_ShopVerijderen_Click(object sender, EventArgs e)
         {
             if(ddl_Shops.SelectedItem.Text != null)
             {
