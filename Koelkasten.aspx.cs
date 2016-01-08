@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Linq;
-using System.Web;
 using Tweakers.Classes;
 using Tweakers.Logic;
 using Tweakers.Data;
@@ -12,15 +9,27 @@ namespace Tweakers
 {
     public partial class Koelkasten : System.Web.UI.Page
     {
+        // Lijst met producten
         private List<ProductUitvoering> producten;
+
+        //Productrepository
         private ProductRepository repo;
 
+        /// <summary>
+        /// Laden van de pagina
+        /// </summary>
+        /// <param name="sender">sender</param>
+        /// <param name="e">event</param>
         protected void Page_Load(object sender, EventArgs e)
         {
             producten = new List<ProductUitvoering>();
             repo = new ProductRepository(new ProductOracleContext());
             Refresh();
         }
+
+        /// <summary>
+        /// Refreshen van de webpagina
+        /// </summary>
         public void Refresh()
         {
             Remove();
@@ -29,6 +38,7 @@ namespace Tweakers
 
             foreach (var p in producten)
             {
+                //Aanmaken van de tabel
                 TableCell c1 = new TableCell();
                 c1.Text = p.Naam;
 

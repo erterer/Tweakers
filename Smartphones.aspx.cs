@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using Tweakers.Classes;
 using Tweakers.Logic;
@@ -12,8 +9,17 @@ namespace Tweakers
 {
     public partial class Smartphones : System.Web.UI.Page
     {
+        //Lijst met producten
         private List<ProductUitvoering> producten;
+
+        //Productrepository
         private ProductRepository repo;
+
+        /// <summary>
+        /// Laden van de webpagina
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event</param>
         protected void Page_Load(object sender, EventArgs e)
         {
             producten = new List<ProductUitvoering>();
@@ -21,6 +27,9 @@ namespace Tweakers
             Refresh();
         }
 
+        /// <summary>
+        /// Plaatsen van de gegevens op de webpagina
+        /// </summary>
         public void Refresh()
         {
             Remove();
@@ -29,6 +38,7 @@ namespace Tweakers
 
             foreach (var p in producten)
             {
+                //Maken van de tabel
                 TableCell c1 = new TableCell();
                 c1.Text = p.Naam;
 

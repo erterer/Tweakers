@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using Tweakers.Classes;
 using Tweakers.Logic;
@@ -12,15 +9,26 @@ namespace Tweakers.PagesProducten
 {
     public partial class Samsung_Galaxy_S6_Blauw_64GB : System.Web.UI.Page
     {
+        //Bool om te controleren of er specs zijn
         public string NotAvailable { get; set; }
+
+        //Lijst met specificaties
         private List<Specificatie> specs = new List<Specificatie>();
+
+        //Repository
         private SpecificatieRepository repo = new SpecificatieRepository(new SpecificatieOracleContext());
 
+        /// <summary>
+        /// Laden van de webpagina
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event</param>
         protected void Page_Load(object sender, EventArgs e)
         {
             repo.GetAllSpecificaties("Samsung Galaxy S6 Blauw 64GB");
             specs = repo.Specs;
 
+            //Maken van de tabel
             foreach (var s in specs)
             {
                 TableCell c1 = new TableCell();
@@ -35,6 +43,8 @@ namespace Tweakers.PagesProducten
 
                 TableSamsungS62.Controls.Add(row);
             }
+
+            //Controleren of er specs zijn
             if (specs.Count == 0)
             {
                 NotAvailable = "Er zijn geen specificaties beschikbaar";

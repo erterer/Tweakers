@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using Tweakers.Classes;
 using Tweakers.Logic;
@@ -12,9 +9,17 @@ namespace Tweakers
 {
     public partial class Shops : System.Web.UI.Page
     {
+        // Lijst met alle winkels
         private List<Shop> shops;
+
+        //ShopRepository
         private ShopRepository repo;
         
+        /// <summary>
+        /// Laden van de pagina
+        /// </summary>
+        /// <param name="sender">sender</param>
+        /// <param name="e">event</param>
         protected void Page_Load(object sender, EventArgs e)
         {
             shops = new List<Shop>();
@@ -33,6 +38,7 @@ namespace Tweakers
 
             foreach (var s in shops)
             {
+                //Maken van de tabel
                 TableCell c1 = new TableCell();
                 c1.Text = s.Naam;
 
