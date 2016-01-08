@@ -11,14 +11,20 @@ namespace Tweakers.Classes
         //Naam van een product
         public string Naam { get; set; }
 
+        /// <summary>
+        /// Zetten van de naam
+        /// </summary>
+        /// <param name="naam">Naam</param>
         public Product(string naam)
         {
             Naam = naam;
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
+
         public List<Product> VergelijkDrieProducten()
         {
             throw new NotImplementedException();
@@ -27,6 +33,7 @@ namespace Tweakers.Classes
         /// 
         /// </summary>
         /// <returns></returns>
+
         public List<Product> VergelijkTweeProducten()
         {
             throw new NotImplementedException();

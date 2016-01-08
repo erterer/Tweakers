@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using Tweakers.Classes;
 
@@ -10,13 +7,22 @@ namespace Tweakers.Data
 {
     public class ProductOracleContext : IProduct
     {
+        //Database instantie
         public Database Database { get;}
 
+        /// <summary>
+        /// Aanmaken van een connectie naar de database
+        /// </summary>
         public ProductOracleContext()
         {
             Database = new Database();
         }
 
+        /// <summary>
+        /// Deze methode stuurt de query naar de database om alle koelkasten op te halen
+        /// </summary>
+        /// <param name="koelkasten">De lijst waar alle koelkasten in worden opgeslagen</param>
+        /// <returns>Hier wordt de lijst teruggegeven</returns>
         public bool GetAllKoelkasten(out List<ProductUitvoering> koelkasten)
         {
             koelkasten = new List<ProductUitvoering>();
@@ -45,6 +51,11 @@ namespace Tweakers.Data
             }
         }
 
+        /// <summary>
+        /// Deze methode stuurt de query naar de database om alle smartphones op te halen
+        /// </summary>
+        /// <param name="smartphones">De lijst waar alle smartphones in worden opgeslagen</param>
+        /// <returns>Hier wordt de lijst teruggeven</returns>
         public bool GetAllSmartphones(out List<ProductUitvoering> smartphones)
         {
             smartphones = new List<ProductUitvoering>();

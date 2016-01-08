@@ -1,19 +1,23 @@
-﻿using System;
-using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Oracle.ManagedDataAccess.Client;
 
 namespace Tweakers.Data
 {
     public class Database
     {
+        //Connectie naar de database
         private OracleConnection conn;
+
+        //Oracle commando
         private OracleCommand command;
-        private string user = "dbi334041"; //User name of the database
-        private string pw = "EG4DSBe1fC"; // password of the database
+
+        //Oracle username
+        private string user = "dbi334041";
+
+        //Oracle wachtwoord
+        private string pw = "EG4DSBe1fC";
+
+        //Adres fontys server
         private string dataSource = "//192.168.15.50:1521/fhictora";
         
         /// <summary>
@@ -72,7 +76,6 @@ namespace Tweakers.Data
             {
                 conn.Open();
                 OracleDataReader reader = command.ExecuteReader();
-                // reader.Read();
                 return reader;
             }
             catch

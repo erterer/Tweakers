@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tweakers.Classes
+﻿namespace Tweakers.Classes
 {
     public class ProductUitvoering : Product
     {
@@ -15,21 +8,17 @@ namespace Tweakers.Classes
         //Kleur van de uitvoering
         public string Kleur { get; }
 
+        /// <summary>
+        /// Zetten van een product
+        /// </summary>
+        /// <param name="naam">Naam, komt van de base</param>
+        /// <param name="uitvoering">Uitvoering van een product</param>
+        /// <param name="kleur">Kleur van de uitvoering</param>
         public ProductUitvoering(string naam, string uitvoering, string kleur)
             : base(naam)
         {
             Uitvoering = uitvoering;
             Kleur = kleur;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="product"></param>
-        /// <returns></returns>
-        public int GetBeoordeling(ProductUitvoering product)
-        {
-            throw new NotImplementedException();
         }
     }
 }

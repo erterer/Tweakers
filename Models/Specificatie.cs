@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tweakers.Classes
+﻿namespace Tweakers.Classes
 {
     public class Specificatie
     {
@@ -14,6 +8,11 @@ namespace Tweakers.Classes
         //Waarde van de bijbehorende specificatie
         public string Waarde { get; }
 
+        /// <summary>
+        /// Zetten van de specificatie
+        /// </summary>
+        /// <param name="naam">Naam</param>
+        /// <param name="waarde">Waarde van de specificatie</param>
         public Specificatie(string naam, string waarde)
         {
             Naam = naam;

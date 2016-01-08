@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Tweakers.Data;
 using Tweakers.Classes;
 
@@ -10,7 +6,10 @@ namespace Tweakers.Logic
 {
     public class ShopRepository
     {
+        //Insantie van de interface waar de methodes staan
         private IShop context;
+
+        //Lijst waar alle winkels in worden opgeslagen
         public List<Shop> Shops = new List<Shop>();
 
         /// <summary>

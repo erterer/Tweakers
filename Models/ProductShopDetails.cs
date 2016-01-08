@@ -20,6 +20,13 @@ namespace Tweakers.Classes
         //De winkel
         public Shop Shop { get; set; }
 
+        /// <summary>
+        /// Koppelen van de shops en producten
+        /// </summary>
+        /// <param name="prijs">Prijs</param>
+        /// <param name="leverbaar">Is het leverbaar</param>
+        /// <param name="product">Het product wat wordt gekoppeld</param>
+        /// <param name="shop">De shop wat wordt gekoppeld</param>
         public ProductShopDetails(double prijs, bool leverbaar, ProductUitvoering product, Shop shop)
         {
             Prijs = prijs;

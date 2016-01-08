@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using Tweakers.Classes;
-using Tweakers.Data;
 
 namespace Tweakers.Data
 {
     public class SpecificatieOracleContext : ISpecificatie
     {
+        //Instantie van de databse
         private Database database;
 
+        /// <summary>
+        /// Hier wordt de connectie naar de database gemaakt
+        /// </summary>
         public SpecificatieOracleContext()
         {
             database = new Database();
         }
 
+        /// <summary>
+        /// Deze methode geeft alle specificaties terug uit de database van een bepaald product
+        /// </summary>
+        /// <param name="product">Het product waarvan de specificaties moeten worden opgevraagd</param>
+        /// <param name="specs">De lijst waar alle specificaties in worden opgeslagen</param>
+        /// <returns>Hier wordt de lijst teruggegeven</returns>
         public bool GetAllSpecificaties(string product, out List<Specificatie> specs)
         {
             specs = new List<Specificatie>();

@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tweakers.Classes
 {
+    /// <summary>
+    /// Enum voor het kiezen van een reviewsoort
+    /// </summary>
     public enum SoortReview
     {
         Gebruiker,
@@ -36,6 +35,16 @@ namespace Tweakers.Classes
         //Product
         public ProductUitvoering Product { get; set; }
 
+        /// <summary>
+        /// Maken van een review
+        /// </summary>
+        /// <param name="soort">Waarover gaat het</param>
+        /// <param name="naam">Reviewnaam</param>
+        /// <param name="beoordeling">Object beoordeling</param>
+        /// <param name="opmerking">Extra opmerkingen</param>
+        /// <param name="datum">Datum</param>
+        /// <param name="shop">Object winkel</param>
+        /// <param name="product">Object uitvoering</param>
         public Review(SoortReview soort, string naam, Beoordeling beoordeling, string opmerking, DateTime datum, Shop shop, ProductUitvoering product)
         {
             Soort = soort;

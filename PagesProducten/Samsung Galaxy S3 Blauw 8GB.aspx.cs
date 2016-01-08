@@ -12,15 +12,26 @@ namespace Tweakers.PagesProducten
 {
     public partial class Samsung_Galaxy_S3_Blauw_8GB : System.Web.UI.Page
     {
+        //Bool om te kijken of er specs zijn
         public string NotAvailable { get; set; }
+
+        //Lijst met de specificaties
         private List<Specificatie> specs = new List<Specificatie>();
+
+        //Repository
         private SpecificatieRepository repo = new SpecificatieRepository(new SpecificatieOracleContext());
 
+        /// <summary>
+        /// Laden van de webpagina
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event</param>
         protected void Page_Load(object sender, EventArgs e)
         {
             repo.GetAllSpecificaties("Samsung Galaxy S3 Blauw 8GB");
             specs = repo.Specs;
 
+            //Maken van de tabel
             foreach (var s in specs)
             {
                 TableCell c1 = new TableCell();
@@ -36,6 +47,7 @@ namespace Tweakers.PagesProducten
                 TableSamsungS31.Controls.Add(row);
             }
 
+            //Controleren of er specificaties zijn
             if (specs.Count == 0)
             {
                 NotAvailable = "Er zijn geen specificaties beschikbaar";

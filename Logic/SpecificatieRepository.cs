@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Tweakers.Classes;
 using Tweakers.Data;
 
@@ -10,7 +6,10 @@ namespace Tweakers.Logic
 {
     public class SpecificatieRepository
     {
+        //De lijst waar alle specificaties in worden opgeslagen
         public List<Specificatie> Specs = new List<Specificatie>();
+
+        //De interface waarin alle regels staan opgeslagen
         private ISpecificatie context;
 
         public SpecificatieRepository(ISpecificatie context)
